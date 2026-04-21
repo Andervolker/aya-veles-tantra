@@ -10,11 +10,15 @@ const taglineWords = ["Распакую", "твою", "сексуальност�
 function MagneticButton({
   children,
   href,
+  target,
+  rel,
   className,
   style,
 }: {
   children: React.ReactNode;
   href?: string;
+  target?: string;
+  rel?: string;
   className?: string;
   style?: React.CSSProperties;
 }) {
@@ -41,6 +45,8 @@ function MagneticButton({
     <a
       ref={btnRef}
       href={href || "#"}
+      target={target}
+      rel={rel}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={className}
@@ -259,7 +265,9 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <MagneticButton
-              href="#quiz"
+              href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598"
+              target="_blank"
+              rel="noopener"
               className="inline-flex items-center gap-3 px-10 py-4 text-sm tracking-[0.18em] uppercase transition-all duration-300 group"
               style={{
                 backgroundColor: "#D4AF37",
@@ -268,7 +276,7 @@ export default function Hero() {
                 fontWeight: 500,
               }}
             >
-              <span>Начать трансформацию</span>
+              <span>Записаться</span>
               <span
                 className="w-5 h-px transition-all duration-300 group-hover:w-8"
                 style={{ backgroundColor: "#2C1C14" }}

@@ -13,6 +13,14 @@ const team = [
     accent: "#2E0A5A",
   },
   {
+    name: "Андрей Волков",
+    role: "Проводник визуальных смыслов",
+    experience: "",
+    specialty: "Создаю визуальную эстетику и цифровую гармонию проекта",
+    image: "/team-andrey.jpg",
+    accent: "#C1A4A9",
+  },
+  {
     name: "Место в команде",
     role: "Ведущий ретритов",
     experience: "10+ лет",
@@ -74,7 +82,7 @@ export default function Team() {
           className="mb-3 tracking-[0.35em] text-xs uppercase"
           style={{ color: "#C1A4A9", fontFamily: "'Inter', sans-serif" }}
         >
-          Наша команда
+          Пространство живых практик
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
@@ -87,7 +95,7 @@ export default function Team() {
             color: "#4A3F35",
           }}
         >
-          Проводники на пути
+          Проводники пространства
         </motion.h2>
       </div>
 
@@ -103,13 +111,13 @@ export default function Team() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15 + i * 0.1 }}
             className="flex-shrink-0 snap-start group cursor-default"
-            style={{ width: i === 0 ? "320px" : "260px" }}
+            style={{ width: i <= 1 ? "300px" : "260px" }}
           >
             {/* Photo card */}
             <div
               className="relative overflow-hidden mb-4"
               style={{
-                aspectRatio: i === 0 ? "3/4" : "4/5",
+                aspectRatio: i <= 1 ? "3/4" : "4/5",
                 borderRadius: "4px",
               }}
             >
@@ -119,7 +127,7 @@ export default function Team() {
                 alt={member.name}
                 className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 style={{
-                  filter: i === 0 ? "saturate(0.95)" : `hue-rotate(${i * 20}deg) saturate(0.7)`,
+                  filter: i <= 1 ? "saturate(0.95)" : `hue-rotate(${i * 20}deg) saturate(0.7)`,
                   maskImage:
                     "radial-gradient(ellipse 86% 90% at 50% 46%, black 50%, rgba(0,0,0,0.55) 70%, transparent 100%)",
                   WebkitMaskImage:
@@ -144,16 +152,18 @@ export default function Team() {
 
               {/* Info overlay — always visible */}
               <div className="absolute bottom-0 left-0 right-0 p-5">
-                <p
-                  className="text-xs uppercase tracking-widest mb-1"
-                  style={{ color: "rgba(212,175,55,0.9)", fontFamily: "'Inter', sans-serif" }}
-                >
-                  {member.experience}
-                </p>
+                {member.experience && (
+                  <p
+                    className="text-xs uppercase tracking-widest mb-1"
+                    style={{ color: "rgba(212,175,55,0.9)", fontFamily: "'Inter', sans-serif" }}
+                  >
+                    {member.experience}
+                  </p>
+                )}
                 <h3
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: i === 0 ? "1.5rem" : "1.25rem",
+                    fontSize: i <= 1 ? "1.5rem" : "1.25rem",
                     fontWeight: 400,
                     color: "#FAF4EE",
                     lineHeight: 1.2,

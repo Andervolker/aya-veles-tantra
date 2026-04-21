@@ -69,3 +69,27 @@ html {
   scroll-behavior: smooth;
   overscroll-behavior: none;
 }
+
+/* Афиша / печать: скрыть оболочку сайта, сохранить фон и типографику в PDF */
+@media print {
+  nav,
+  footer {
+    display: none !important;
+  }
+
+  .poster-ambience {
+    display: none !important;
+  }
+
+  html,
+  body {
+    background-color: #f5ebe0 !important;
+    color: #4a3f35 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body::before {
+    opacity: 0.028;
+  }
+}

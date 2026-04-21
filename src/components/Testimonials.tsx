@@ -7,9 +7,9 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Марина, 38 лет",
-    location: "Москва",
+    location: "Екатеринбург",
     format: "Ретрит ГРАНИ",
-    text: "После ретрита что-то внутри перещёлкнуло. Снова чувствую своё тело — не как помеху, а как дом. Энергия вернулась, и стало понятно, как долго жил(а) в «выключенном» режиме. Айе — благодарность за безопасное пространство.",
+    text: "После ретрита что-то внутри перещёлкнуло. Снова чувствую своё тело — не как помеху, а как дом. Энергия вернулась, и стало понятно, как долго пребывала в «выключенном» режиме. Айе — благодарность за безопасное пространство.",
     rating: 5,
   },
   {
@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     name: "Екатерина, 31 год",
-    location: "Москва",
+    location: "Екатеринбург",
     format: "Личные сессии",
     text: "Потеряла интерес к жизни. Телесные практики с Айей вернули ощущение себя. Три месяца работы — и открываю себя с новой стороны. Либидо вернулось, энергии стало в разы больше.",
     rating: 5,
@@ -35,7 +35,7 @@ const testimonials = [
   },
   {
     name: "Дмитрий и Анна",
-    location: "Москва",
+    location: "Екатеринбург",
     format: "Лаборатория отношений",
     text: "Пришли в кризисе. Лаборатория отношений стала точкой сборки: наконец поняли, чего хотим друг от друга. Рекомендуем парам, которые чувствуют, что потеряли связь.",
     rating: 5,
@@ -195,7 +195,9 @@ export default function Testimonials() {
           className="text-center mt-12"
         >
           <a
-            href="#quiz"
+            href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598"
+            target="_blank"
+            rel="noopener"
             className="inline-flex items-center gap-3 px-8 py-3.5 text-sm uppercase tracking-widest transition-all hover:opacity-90"
             style={{
               backgroundColor: "#D4AF37",
@@ -204,7 +206,7 @@ export default function Testimonials() {
               fontWeight: 500,
             }}
           >
-            Начать свою трансформацию
+            Записаться
           </a>
         </motion.div>
       </div>

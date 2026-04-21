@@ -5,7 +5,9 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { ChevronRight, Send, CheckCircle, AlertCircle } from "lucide-react";
 import Logo from "./Logo";
 
-const SHEETBEST_API = "https://api.sheetbest.com/sheets/YOUR_SHEET_ID";
+// Вставьте ваш токен и chat_id после получения от @BotFather и первого сообщения боту
+const TELEGRAM_BOT_TOKEN = "YOUR_BOT_TOKEN";
+const TELEGRAM_CHAT_ID = "YOUR_CHAT_ID";
 
 type Step = 0 | 1 | 2 | 3;
 type FormState = "idle" | "loading" | "success" | "error";
@@ -29,7 +31,7 @@ const step2Options = [
 ];
 
 const step3Options = [
-  { id: "now", label: "Готов(а) начать сейчас" },
+  { id: "now", label: "Время начать — уже сейчас" },
   { id: "month", label: "В течение месяца" },
   { id: "later", label: "Пока изучаю возможности" },
 ];
@@ -92,18 +94,30 @@ export default function QuizContactForm() {
     if (!validate()) return;
     setFormState("loading");
     try {
-      const res = await fetch(SHEETBEST_API, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          Дата: new Date().toLocaleString("ru-RU"),
-          Имя: contact.name,
-          Телефон: contact.phone,
-          Запрос: answers.reason,
-          Формат: answers.format,
-          Готовность: answers.timing,
-        }),
-      });
+      const text = [
+        `🌸 *Новая заявка — Айя Велес*`,
+        ``,
+        `👤 *Имя:* ${contact.name}`,
+        `📱 *Телефон:* ${contact.phone}`,
+        `📅 *Дата:* ${new Date().toLocaleString("ru-RU")}`,
+        ``,
+        `💬 *Запрос:* ${answers.reason}`,
+        `📋 *Формат:* ${answers.format}`,
+        `⏰ *Готовность:* ${answers.timing}`,
+      ].join("\n");
+
+      const res = await fetch(
+        `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text,
+            parse_mode: "Markdown",
+          }),
+        }
+      );
       if (!res.ok) throw new Error();
       setFormState("success");
     } catch {
@@ -211,7 +225,7 @@ export default function QuizContactForm() {
                 color: "#F5EBE0",
               }}
             >
-              Заявка принята!
+              Ваша заявка отправлена в пространство Айи
             </h3>
             <p
               className="text-sm mb-8"

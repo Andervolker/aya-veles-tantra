@@ -82,17 +82,19 @@ export default function Footer() {
             </p>
             <nav className="space-y-2.5">
               {[
-                ["#about", "О мастере"],
-                ["#formats", "Форматы"],
-                ["#schedule", "Расписание"],
-                ["#reviews", "Отзывы"],
-                ["#team", "Команда"],
-                ["#faq", "Вопросы"],
-                ["#quiz", "Записаться"],
-              ].map(([href, label]) => (
+                ["#about", "О мастере", false],
+                ["#formats", "Форматы", false],
+                ["#schedule", "Расписание", false],
+                ["#reviews", "Отзывы", false],
+                ["#team", "Команда", false],
+                ["#faq", "Вопросы", false],
+                ["https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598", "Записаться", true],
+              ].map(([href, label, external]) => (
                 <a
                   key={href}
                   href={href}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener" : undefined}
                   className="block text-sm transition-colors duration-200 hover:text-[#F5EBE0]"
                   style={{ color: "#C1A4A9", fontFamily: "'Inter', sans-serif", fontWeight: 300 }}
                 >
@@ -144,6 +146,27 @@ export default function Footer() {
                   className="mb-2 text-xs uppercase tracking-widest"
                   style={{ color: "#D4AF37", fontFamily: "'Inter', sans-serif" }}
                 >
+                  Адрес
+                </p>
+                <p
+                  className="text-sm leading-relaxed"
+                  style={{ color: "#C1A4A9", fontFamily: "'Inter', sans-serif", fontWeight: 300 }}
+                >
+                  г. Екатеринбург
+                  <span className="mx-1.5" style={{ color: "rgba(212,175,55,0.4)" }}>·</span>
+                  ул. Малышева 71А
+                  <span className="mx-1.5" style={{ color: "rgba(212,175,55,0.4)" }}>·</span>
+                  офис 304
+                </p>
+              </div>
+              <div
+                className="mt-4 pt-4"
+                style={{ borderTop: "1px solid rgba(193,164,169,0.1)" }}
+              >
+                <p
+                  className="mb-2 text-xs uppercase tracking-widest"
+                  style={{ color: "#D4AF37", fontFamily: "'Inter', sans-serif" }}
+                >
                   Пространство практик
                 </p>
                 <a
@@ -181,7 +204,7 @@ export default function Footer() {
             className="text-xs"
             style={{ color: "rgba(193,164,169,0.4)", fontFamily: "'Inter', sans-serif" }}
           >
-            Пространство ВНЕ ИЗМЕРЕНИЙ · Москва
+            Пространство ВНЕ ИЗМЕРЕНИЙ · Екатеринбург
           </p>
         </div>
       </div>
