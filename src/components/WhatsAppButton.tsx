@@ -52,9 +52,9 @@ export default function WhatsAppButton() {
       {visible && (
         <motion.a
           ref={btnRef}
-          href="https://max.ru"
+          href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           aria-label="Записаться"
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{ opacity: 1, scale: 1 }}

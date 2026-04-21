@@ -249,7 +249,7 @@ export default function About() {
                   <a
                     href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm group"
                     style={{ color: "#4A3F35", fontFamily: "'Inter', sans-serif" }}
                   >
@@ -260,13 +260,13 @@ export default function About() {
                   </a>
                   <div className="hidden sm:block w-px h-4" style={{ backgroundColor: "rgba(193,164,169,0.5)" }} />
                   <a
-                    href="https://wa.me/79025002098"
+                    href="https://t.me/ayaveles"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     className="hidden sm:inline-flex items-center gap-2 text-sm"
                     style={{ color: "#C1A4A9", fontFamily: "'Inter', sans-serif" }}
                   >
-                    <span className="hover:text-[#4A3F35] transition-colors">WhatsApp</span>
+                    <span className="hover:text-[#4A3F35] transition-colors">Telegram</span>
                   </a>
                 </div>
               </FogReveal>

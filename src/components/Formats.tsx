@@ -11,7 +11,7 @@ const formats = [
     title: "Тренинги и курсы",
     description:
       "Групповые офлайн-тренинги и курсы — от однодневных встреч до двухмесячных программ. Работа в группе даёт уникальную динамику и поддержку сообщества.",
-    features: ["1 день — 2 месяца", "Москва, центр ВНЕ ИЗМЕРЕНИЙ", "До 20 участников"],
+    features: ["1 день — 2 месяца", "Екатеринбург, центр ВНЕ ИЗМЕРЕНИЙ", "До 20 участников"],
     accentColor: "#C1A4A9",
   },
   {
@@ -20,7 +20,7 @@ const formats = [
     title: "Ретриты",
     description:
       "Выездные трансформационные ретриты (2–5 дней) вдали от города. Тело раскрывается через природу, тишину, практики и групповое поле.",
-    features: ["2–5 дней", "Подмосковье, природные базы", "Малые группы"],
+    features: ["2–5 дней", "Екатеринбург, природные базы", "Малые группы"],
     accentColor: "#D4AF37",
     featured: true,
   },
@@ -36,7 +36,7 @@ const formats = [
   {
     icon: Zap,
     tag: "Сексуальность",
-    title: "СЕКС-коучинг",
+    title: "Индивидуальная практика",
     description:
       "Индивидуальная работа и коучинг для пар. Раскрытие сексуального потенциала, работа с блоками, улучшение близости и связи.",
     features: ["Индивидуально & для пар", "Онлайн & офлайн", "Сопровождение"],
@@ -206,7 +206,9 @@ export default function Formats() {
                 </ul>
 
                 <a
-                  href="#quiz"
+                  href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm transition-all duration-300 group-hover:gap-3"
                   style={{ color: "#FAF4EE", fontFamily: "'Inter', sans-serif", fontWeight: 400 }}
                 >

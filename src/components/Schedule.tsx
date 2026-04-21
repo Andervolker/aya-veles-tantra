@@ -337,7 +337,9 @@ export default function Schedule() {
                               </span>
                             )}
                             <a
-                              href="#quiz"
+                              href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598"
+                              target="_blank"
+                              rel="noopener noreferrer"
                               onClick={(e) => e.stopPropagation()}
                               className="inline-flex items-center justify-center px-6 py-2.5 text-xs uppercase tracking-widest transition-all hover:opacity-90"
                               style={{

@@ -267,7 +267,7 @@ export default function Hero() {
             <MagneticButton
               href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-10 py-4 text-sm tracking-[0.18em] uppercase transition-all duration-300 group"
               style={{
                 backgroundColor: "#D4AF37",
@@ -308,11 +308,11 @@ export default function Hero() {
             className="mt-10 flex justify-center gap-6 text-xs tracking-widest uppercase"
             style={{ color: "rgba(193,164,169,0.75)", fontFamily: "'Inter', sans-serif" }}
           >
-            <a href="https://t.me" target="_blank" rel="noopener" className="hover:text-[#FAF4EE] transition-colors">Telegram</a>
+            <a href="https://t.me/ayaveles" target="_blank" rel="noopener noreferrer" className="hover:text-[#FAF4EE] transition-colors">Telegram</a>
             <span style={{ color: "#D4AF37", opacity: 0.45 }}>·</span>
-            <a href="https://vk.com" target="_blank" rel="noopener" className="hover:text-[#FAF4EE] transition-colors">VK</a>
+            <a href="https://vk.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FAF4EE] transition-colors">VK</a>
             <span style={{ color: "#D4AF37", opacity: 0.45 }}>·</span>
-            <a href="https://wa.me/79025002098" target="_blank" rel="noopener" className="hover:text-[#FAF4EE] transition-colors">WhatsApp</a>
+            <a href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598" target="_blank" rel="noopener noreferrer" className="hover:text-[#FAF4EE] transition-colors">Записаться</a>
           </motion.div>
         </motion.div>
       </motion.div>

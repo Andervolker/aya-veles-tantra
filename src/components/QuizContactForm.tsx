@@ -5,9 +5,6 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { ChevronRight, Send, CheckCircle, AlertCircle } from "lucide-react";
 import Logo from "./Logo";
 
-// Вставьте ваш токен и chat_id после получения от @BotFather и первого сообщения боту
-const TELEGRAM_BOT_TOKEN = "YOUR_BOT_TOKEN";
-const TELEGRAM_CHAT_ID = "YOUR_CHAT_ID";
 
 type Step = 0 | 1 | 2 | 3;
 type FormState = "idle" | "loading" | "success" | "error";
@@ -24,7 +21,7 @@ const step1Options = [
 const step2Options = [
   { id: "group", label: "Групповые тренинги / события" },
   { id: "retreat", label: "Выездной ретрит" },
-  { id: "personal", label: "Личная сессия или СЕКС-коучинг" },
+  { id: "personal", label: "Личная сессия или Индивидуальная практика" },
   { id: "tantra", label: "Тантрический массаж" },
   { id: "online", label: "Онлайн-формат" },
   { id: "any", label: "Подскажите сами" },
@@ -94,30 +91,17 @@ export default function QuizContactForm() {
     if (!validate()) return;
     setFormState("loading");
     try {
-      const text = [
-        `🌸 *Новая заявка — Айя Велес*`,
-        ``,
-        `👤 *Имя:* ${contact.name}`,
-        `📱 *Телефон:* ${contact.phone}`,
-        `📅 *Дата:* ${new Date().toLocaleString("ru-RU")}`,
-        ``,
-        `💬 *Запрос:* ${answers.reason}`,
-        `📋 *Формат:* ${answers.format}`,
-        `⏰ *Готовность:* ${answers.timing}`,
-      ].join("\n");
-
-      const res = await fetch(
-        `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            chat_id: TELEGRAM_CHAT_ID,
-            text,
-            parse_mode: "Markdown",
-          }),
-        }
-      );
+      const res = await fetch("/api/send-telegram", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: contact.name,
+          phone: contact.phone,
+          reason: answers.reason,
+          format: answers.format,
+          timing: answers.timing,
+        }),
+      });
       if (!res.ok) throw new Error();
       setFormState("success");
     } catch {
@@ -225,22 +209,22 @@ export default function QuizContactForm() {
                 color: "#F5EBE0",
               }}
             >
-              Ваша заявка отправлена в пространство Айи
+              Запрос отправлен в пространство Айи
             </h3>
             <p
               className="text-sm mb-8"
               style={{ color: "#EDD9C8", fontFamily: "'Inter', sans-serif", fontWeight: 300 }}
             >
-              Айя свяжется с вами в течение дня через WhatsApp или Telegram.
+              Айя свяжется с вами в течение дня через Telegram.
             </p>
             <a
-              href="https://wa.me/79025002098"
+              href="https://t.me/ayaveles"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 text-sm uppercase tracking-widest"
               style={{ backgroundColor: "#D4AF37", color: "#4A3F35", fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
             >
-              Написать в WhatsApp сейчас
+              Написать в Telegram сейчас
             </a>
           </motion.div>
         ) : (
@@ -338,7 +322,7 @@ export default function QuizContactForm() {
                       <div>
                         <input
                           type="tel"
-                          placeholder="Телефон / WhatsApp *"
+                          placeholder="Телефон / Telegram *"
                           value={contact.phone}
                           onChange={(e) => {
                             setContact((c) => ({ ...c, phone: e.target.value }));
@@ -369,7 +353,7 @@ export default function QuizContactForm() {
                         <div className="flex items-center gap-2">
                           <AlertCircle size={15} style={{ color: "#C1736A" }} />
                           <p className="text-xs" style={{ color: "#C1736A", fontFamily: "'Inter', sans-serif" }}>
-                            Ошибка отправки. Напишите напрямую в WhatsApp.
+                            Ошибка отправки. Напишите напрямую в Telegram.
                           </p>
                         </div>
                       )}
@@ -453,7 +437,7 @@ export default function QuizContactForm() {
               <a
                 href="/privacy"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 style={{ color: "#C1A4A9", textDecoration: "underline", textUnderlineOffset: "3px" }}
               >
                 Политикой конфиденциальности
