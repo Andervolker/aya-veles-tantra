@@ -55,7 +55,7 @@ export default function Footer() {
                   key={s.label}
                   href={s.href}
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   aria-label={s.label}
                   className="transition-opacity hover:opacity-60"
                 >
@@ -89,12 +89,12 @@ export default function Footer() {
                 ["#team", "Команда", false],
                 ["#faq", "Вопросы", false],
                 ["https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598", "Записаться", true],
-              ].map(([href, label, external]) => (
+              ].map(([href, label, external], i) => (
                 <a
-                  key={href}
-                  href={href}
+                  key={i}
+                  href={href as string}
                   target={external ? "_blank" : undefined}
-                  rel={external ? "noopener" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
                   className="block text-sm transition-colors duration-200 hover:text-[#F5EBE0]"
                   style={{ color: "#C1A4A9", fontFamily: "'Inter', sans-serif", fontWeight: 300 }}
                 >
@@ -123,7 +123,7 @@ export default function Footer() {
               <a
                 href="https://wa.me/79025002098"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 className="block text-sm hover:text-[#F5EBE0] transition-colors"
                 style={{ color: "#C1A4A9", fontFamily: "'Inter', sans-serif", fontWeight: 300 }}
               >
@@ -132,7 +132,7 @@ export default function Footer() {
               <a
                 href="https://t.me"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 className="block text-sm hover:text-[#F5EBE0] transition-colors"
                 style={{ color: "#C1A4A9", fontFamily: "'Inter', sans-serif", fontWeight: 300 }}
               >
@@ -172,7 +172,7 @@ export default function Footer() {
                 <a
                   href="https://max.ru"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   className="text-sm hover:text-[#F5EBE0] transition-colors"
                   style={{ color: "#C1A4A9", fontFamily: "'Inter', sans-serif", fontWeight: 300 }}
                 >
