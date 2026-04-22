@@ -310,7 +310,7 @@ export default function Hero() {
           >
             <a href="https://t.me/ayaveles" target="_blank" rel="noopener noreferrer" className="hover:text-[#FAF4EE] transition-colors">Telegram</a>
             <span style={{ color: "#D4AF37", opacity: 0.45 }}>·</span>
-            <a href="https://vk.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FAF4EE] transition-colors">VK</a>
+            <a href="https://vk.com/ayaveles" target="_blank" rel="noopener noreferrer" className="hover:text-[#FAF4EE] transition-colors">VK</a>
             <span style={{ color: "#D4AF37", opacity: 0.45 }}>·</span>
             <a href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598" target="_blank" rel="noopener noreferrer" className="hover:text-[#FAF4EE] transition-colors">Записаться</a>
           </motion.div>

@@ -218,7 +218,7 @@ export default function QuizContactForm() {
               Айя свяжется с вами в течение дня через Telegram.
             </p>
             <a
-              href="https://t.me/ayaveles"
+              href="https://t.me/ayaveles_robot"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 text-sm uppercase tracking-widest"

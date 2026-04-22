@@ -4,9 +4,9 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import { motion, AnimatePresence, useSpring, useMotionValue } from "framer-motion";
 import { Sparkles } from "lucide-react";
 
-export default function WhatsAppButton() {
+export default function FloatingCTA() {
   const [visible, setVisible] = useState(false);
-  const btnRef = useRef<HTMLAnchorElement>(null);
+  const btnRef = useRef<HTMLButtonElement>(null);
 
   const rawX = useMotionValue(0);
   const rawY = useMotionValue(0);
@@ -47,21 +47,24 @@ export default function WhatsAppButton() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [handleMouseMove]);
 
+  const scrollToQuiz = () => {
+    const el = document.getElementById("quiz");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <AnimatePresence>
       {visible && (
-        <motion.a
+        <motion.button
           ref={btnRef}
-          href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598"
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={scrollToQuiz}
           aria-label="Записаться"
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.6 }}
           style={{ x, y, bottom: 28, right: 28 }}
           transition={{ type: "spring", stiffness: 280, damping: 22 }}
-          className="fixed z-50 flex items-center gap-2.5 rounded-full group"
+          className="fixed z-50 flex items-center gap-2.5 rounded-full group cursor-pointer"
           whileTap={{ scale: 0.93 }}
         >
           {/* Glass pill */}
@@ -104,7 +107,7 @@ export default function WhatsAppButton() {
             className="absolute inset-0 rounded-full animate-ping pointer-events-none"
             style={{ backgroundColor: "rgba(212,175,55,0.2)" }}
           />
-        </motion.a>
+        </motion.button>
       )}
     </AnimatePresence>
   );

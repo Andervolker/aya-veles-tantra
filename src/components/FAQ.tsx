@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Как мне вас найти?",
-    a: "Пространство ВНЕ ИЗМЕРЕНИЙ находится в Москве. Точный адрес отправляется после записи на мероприятие. Также можно связаться по WhatsApp: +7 (902) 500-20-98, или написать в Telegram.",
+    a: "Пространство ВНЕ ИЗМЕРЕНИЙ находится в Екатеринбурге, ул. Малышева 71А, офис 304. Точный адрес также отправляется после записи. Написать напрямую можно в Telegram: @ayaveles.",
   },
   {
     q: "Работаете ли вы только с женщинами?",
@@ -145,18 +145,19 @@ export default function FAQ() {
           <p className="text-sm mb-4" style={{ color: "#4A3F35", fontFamily: "'Inter', sans-serif", fontWeight: 300 }}>
             Остался вопрос?
           </p>
-          <a
-            href="https://wa.me/79025002098"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center gap-2 text-sm group"
+          <button
+            onClick={() => {
+              const el = document.getElementById("quiz");
+              if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+            className="inline-flex items-center gap-2 text-sm group cursor-pointer"
             style={{ color: "#4A3F35", fontFamily: "'Inter', sans-serif" }}
           >
             <span className="underline underline-offset-4 decoration-[#D4AF37] group-hover:opacity-70 transition-opacity">
-              Спросите в WhatsApp
+              Записаться сейчас
             </span>
             <span>→</span>
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>
