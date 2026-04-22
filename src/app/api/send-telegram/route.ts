@@ -57,6 +57,8 @@ export async function POST(req: NextRequest) {
   const date = new Date().toLocaleString("ru-RU", { timeZone: "Asia/Yekaterinburg" });
 
   const text = [
+    `✨ Добро пожаловать в пространство Айи Велес! Ваша заявка принята.`,
+    ``,
     `🌸 *Новая заявка — Айя Велес*`,
     ``,
     `👤 *Имя:* ${name}`,

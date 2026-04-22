@@ -32,7 +32,7 @@ export default function Home() {
           <Results />
           <Schedule />
           <Testimonials />
-          <Team />
+          {false && <Team />}
           <TransformationStories />
           <FAQ />
           <QuizContactForm />
