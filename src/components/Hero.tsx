@@ -296,7 +296,7 @@ export default function Hero() {
                 boxShadow: "inset 0 0 0 1px rgba(250,244,238,0.25), 0 4px 16px rgba(0,0,0,0.1)",
               }}
             >
-              Расписание апреля
+              Расписание июня
             </MagneticButton>
           </motion.div>
 
