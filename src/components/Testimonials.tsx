@@ -195,9 +195,7 @@ export default function Testimonials() {
           className="text-center mt-12"
         >
           <a
-            href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598"
-            target="_blank"
-            rel="noopener"
+            href="#contacts"
             className="inline-flex items-center gap-3 px-8 py-3.5 text-sm uppercase tracking-widest transition-all hover:opacity-90"
             style={{
               backgroundColor: "#D4AF37",

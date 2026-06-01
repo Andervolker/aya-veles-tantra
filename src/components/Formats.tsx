@@ -206,9 +206,7 @@ export default function Formats() {
                 </ul>
 
                 <a
-                  href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#contacts"
                   className="inline-flex items-center gap-2 text-sm transition-all duration-300 group-hover:gap-3"
                   style={{ color: "#FAF4EE", fontFamily: "'Inter', sans-serif", fontWeight: 400 }}
                 >

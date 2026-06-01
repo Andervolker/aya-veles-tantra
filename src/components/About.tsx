@@ -247,9 +247,7 @@ export default function About() {
 
                 <div className="mt-9 flex items-center gap-5">
                   <a
-                    href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#contacts"
                     className="inline-flex items-center gap-2 text-sm group"
                     style={{ color: "#4A3F35", fontFamily: "'Inter', sans-serif" }}
                   >

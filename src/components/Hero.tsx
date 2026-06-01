@@ -265,9 +265,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <MagneticButton
-              href="https://max.ru/u/f9LHodD0cOKyBKlPXKXMzQGtLCEkTa__mY4zoVtVwGbS0mAInyO_1Obq598"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contacts"
               className="inline-flex items-center gap-3 px-10 py-4 text-sm tracking-[0.18em] uppercase transition-all duration-300 group"
               style={{
                 backgroundColor: "#D4AF37",

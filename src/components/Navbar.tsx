@@ -44,10 +44,10 @@ export default function Navbar() {
     }, 300);
   };
 
-  const scrollToQuiz = () => {
+  const scrollToContacts = () => {
     setMenuOpen(false);
     setTimeout(() => {
-      const el = document.getElementById("quiz");
+      const el = document.getElementById("contacts");
       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 300);
   };
@@ -117,7 +117,7 @@ export default function Navbar() {
               <div className="flex items-center gap-3 flex-shrink-0">
                 {/* CTA */}
                 <button
-                  onClick={scrollToQuiz}
+                  onClick={scrollToContacts}
                   className="flex items-center gap-2 px-5 py-2 text-xs uppercase tracking-[0.15em] transition-all duration-300 hover:opacity-90 active:scale-95"
                   style={{
                     backgroundColor: "#D4AF37",
@@ -223,7 +223,7 @@ export default function Navbar() {
                   className="px-8 pt-5 pb-6"
                 >
                   <button
-                    onClick={scrollToQuiz}
+                    onClick={scrollToContacts}
                     className="w-full py-3 text-sm uppercase tracking-[0.2em] transition-all duration-300 hover:opacity-90 active:scale-95"
                     style={{
                       backgroundColor: "#D4AF37",

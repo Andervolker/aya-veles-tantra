@@ -11,7 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import Team from "@/components/Team";
 import TransformationStories from "@/components/TransformationStories";
 import FAQ from "@/components/FAQ";
-import QuizContactForm from "@/components/QuizContactForm";
+import Contacts from "@/components/Contacts";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
@@ -35,7 +35,7 @@ export default function Home() {
           {false && <Team />}
           <TransformationStories />
           <FAQ />
-          <QuizContactForm />
+          <Contacts />
         </main>
         <Footer />
       </SmoothScroll>
